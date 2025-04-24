@@ -1,0 +1,12 @@
+# Ignore Godot generated files
+.import/
+.godot/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.tmp
+*.temp
+*.bak
