@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://byiw2ixhrusa6"]
 
 [ext_resource type="Script" uid="uid://br3dkkri1u1i7" path="res://scenes/main/canvas_layer.gd" id="1_iuonh"]
-[ext_resource type="FontFile" uid="uid://br5tty0s4y1vf" path="res://assets/ui/fonts/Fipps-Regular.otf" id="2_k2fmo"]
-[ext_resource type="Texture2D" uid="uid://dvciqqtfo8u8n" path="res://gameBackground.png" id="3_l3cfh"]
+[ext_resource type="FontFile" uid="uid://cjbwnbv7shs83" path="res://assets/ui/fonts/Fipps-Regular.otf" id="2_k2fmo"]
+[ext_resource type="Texture2D" uid="uid://bmney3cymvsha" path="res://gameBackground.png" id="3_l3cfh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k2fmo"]
 
@@ -59,3 +59,9 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_yyfjg")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_b1x3f")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a8run")
 text = "Quit"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="CanvasLayer"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]

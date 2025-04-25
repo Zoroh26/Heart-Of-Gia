@@ -1,35 +1,59 @@
 extends CanvasLayer
 
-@onready var start_button = $StartButton
-@onready var quit_button = $QuitButton
+@onready var music_player: AudioStreamPlayer = $MusicPlayer
+@onready var start_button: Button = $StartButton
+@onready var quit_button: Button = $QuitButton
+@onready var hover_sound: AudioStreamPlayer = $HoverSound
+
+# Preload sounds to avoid null errors
+const HOVER_SOUND = preload("res://assets/audio/startpage/hoverSound.mp3")
 
 func _ready():
-	# Connect buttons safely
+	# Initialize music with looping
+	var music = load("res://assets/audio/startpage/startpage.ogg")
+	if music:
+		music_player.stream = music
+		music_player.volume_db = -25.0
+		music_player.autoplay = true
+		music_player.finished.connect(_on_music_finished)
+		music_player.play()
+	else:
+		push_error("Missing music file")
+	
+	# Verify and connect buttons
 	if start_button:
 		start_button.pressed.connect(_on_start_button_pressed)
-	else:
-		push_error("StartButton node missing!")
+		start_button.mouse_entered.connect(_on_button_hover)
 	
 	if quit_button:
 		quit_button.pressed.connect(_on_quit_button_pressed)
-	else:
-		push_error("QuitButton node missing!")
+		quit_button.mouse_entered.connect(_on_button_hover)
+	
+	# Safety check for sound nodes
+	if not hover_sound:
+		push_warning("HoverSound node missing - create an AudioStreamPlayer named 'HoverSound'")
+
+func _on_music_finished():
+	music_player.play()  # Seamless loop
+
+func _on_button_hover():
+	if hover_sound and HOVER_SOUND:
+		hover_sound.stream = HOVER_SOUND
+		hover_sound.volume_db = -15.0
+		hover_sound.play()
 
 func _on_start_button_pressed():
-	print("Starting game...")
-	
-	# Optional transition effect
-	if has_node("AnimationPlayer"):
-		$AnimationPlayer.play("fade_out")
-		await $AnimationPlayer.animation_finished
-	
-	# Load scene with error checking
-	var scene_path = "res://scenes/environments/forge_biome/map.tscn"
-	if ResourceLoader.exists(scene_path):
-		get_tree().change_scene_to_file(scene_path)
-	else:
-		push_error("Scene not found: ", scene_path)
+	# Fade out music before transition
+	create_tween()\
+		.tween_property(music_player, "volume_db", -80.0, 0.5)\
+		.finished.connect(
+			func(): 
+				if ResourceLoader.exists("res://scenes/environments/forge_biome/map.tscn"):
+					get_tree().change_scene_to_file("res://scenes/environments/forge_biome/map.tscn")
+				)
 
 func _on_quit_button_pressed():
-	print("Quitting game...")
-	get_tree().quit()  # Close the game window
+	# Fade out before quitting
+	create_tween()\
+		.tween_property(music_player, "volume_db", -80.0, 0.5)\
+		.finished.connect(get_tree().quit)
