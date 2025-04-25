@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ble836ffemrjy"]
+
+[node name="CanvasLayer" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 812.0
+offset_bottom = 485.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]

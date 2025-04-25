@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ioocb56eij7g"]
+[gd_scene load_steps=4 format=3 uid="uid://ioocb56eij7g"]
 
 [ext_resource type="Script" uid="uid://cgw4pbbwovgp8" path="res://scenes/characters/eos/player.gd" id="1_6qph8"]
 [ext_resource type="Texture2D" uid="uid://pvfmxeqk3tlv" path="res://assets/characters/eos/eos.png" id="1_6ri8s"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qph8"]
+size = Vector2(278, 386.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 z_index = 1
+collision_mask = 2
 script = ExtResource("1_6qph8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,3 +18,7 @@ texture = ExtResource("1_6ri8s")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.4, 0.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 17.75)
+shape = SubResource("RectangleShape2D_6qph8")
