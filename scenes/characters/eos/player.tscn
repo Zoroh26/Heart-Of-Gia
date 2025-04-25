@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ioocb56eij7g"]
+
+[ext_resource type="Script" uid="uid://cgw4pbbwovgp8" path="res://scenes/characters/eos/player.gd" id="1_6qph8"]
+[ext_resource type="Texture2D" uid="uid://pvfmxeqk3tlv" path="res://assets/characters/eos/eos.png" id="1_6ri8s"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_6qph8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.50002, 1.24999)
+scale = Vector2(0.685556, 0.669445)
+texture = ExtResource("1_6ri8s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.4, 0.4)
