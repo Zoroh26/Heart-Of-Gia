@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://by2meni3hqtfv"]
+[gd_scene load_steps=5 format=4 uid="uid://bhookh255ofni"]
 
 [ext_resource type="Texture2D" uid="uid://ntvxdvx5cx8x" path="res://assets/environments/guardian_biome/tiles/ground/1_Forests_128x64.png" id="1_bv2vk"]
 [ext_resource type="PackedScene" uid="uid://ioocb56eij7g" path="res://scenes/characters/eos/player.tscn" id="2_4ve4n"]
@@ -42,5 +42,4 @@ tile_map_data = PackedByteArray("AAABAAIAAQAAAAIAAAAAAAIAAQAAAAUAAAAAAAEAAQAAAAI
 tile_set = SubResource("TileSet_dfe7y")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4ve4n")]
-z_index = 1
 position = Vector2(-4229, -312)
