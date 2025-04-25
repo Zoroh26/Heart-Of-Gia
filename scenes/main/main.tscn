@@ -1,7 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://byiw2ixhrusa6"]
+[gd_scene load_steps=12 format=3 uid="uid://byiw2ixhrusa6"]
 
 [ext_resource type="Script" uid="uid://br3dkkri1u1i7" path="res://scenes/main/canvas_layer.gd" id="1_iuonh"]
-[ext_resource type="Texture2D" uid="uid://c4awwkp5kqn0s" path="res://assets/environments/background.png" id="2_k2fmo"]
+[ext_resource type="FontFile" uid="uid://br5tty0s4y1vf" path="res://assets/ui/fonts/Fipps-Regular.otf" id="2_k2fmo"]
+[ext_resource type="Texture2D" uid="uid://dvciqqtfo8u8n" path="res://gameBackground.png" id="3_l3cfh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k2fmo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3cfh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6q06x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ow5a4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hujxm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyfjg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b1x3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8run"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,27 +26,36 @@
 script = ExtResource("1_iuonh")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = -3.0
-offset_top = 6.0
-offset_right = 1917.0
-offset_bottom = 1074.0
-texture = ExtResource("2_k2fmo")
-expand_mode = 1
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_l3cfh")
 
-[node name="Start" type="Button" parent="CanvasLayer"]
-offset_left = 764.0
-offset_top = 416.0
-offset_right = 1103.0
-offset_bottom = 561.0
-theme_override_font_sizes/font_size = 100
-text = "Start"
+[node name="StartButton" type="Button" parent="CanvasLayer"]
+offset_left = 836.0
+offset_top = 526.0
+offset_right = 1091.0
+offset_bottom = 676.0
+theme_override_colors/font_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
+theme_override_fonts/font = ExtResource("2_k2fmo")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k2fmo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l3cfh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6q06x")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ow5a4")
+text = "Start
+"
 
-[node name="CheckButton" type="CheckButton" parent="CanvasLayer"]
-offset_left = 1720.0
-offset_top = 47.0
-offset_right = 1861.0
-offset_bottom = 101.0
-theme_override_font_sizes/font_size = 33
-text = "Music"
-
-[connection signal="pressed" from="CanvasLayer/Start" to="CanvasLayer" method="_on_button_pressed"]
+[node name="QuitButton" type="Button" parent="CanvasLayer"]
+offset_left = 864.0
+offset_top = 639.0
+offset_right = 1059.0
+offset_bottom = 789.0
+theme_override_colors/font_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+theme_override_fonts/font = ExtResource("2_k2fmo")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hujxm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yyfjg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_b1x3f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a8run")
+text = "Quit"

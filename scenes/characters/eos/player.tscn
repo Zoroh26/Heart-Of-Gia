@@ -1,16 +1,198 @@
-[gd_scene load_steps=3 format=3 uid="uid://ioocb56eij7g"]
+[gd_scene load_steps=45 format=3 uid="uid://ioocb56eij7g"]
 
 [ext_resource type="Script" uid="uid://cgw4pbbwovgp8" path="res://scenes/characters/eos/player.gd" id="1_6qph8"]
-[ext_resource type="Texture2D" uid="uid://pvfmxeqk3tlv" path="res://assets/characters/eos/eos.png" id="1_6ri8s"]
+[ext_resource type="Texture2D" uid="uid://svwdv1hwbsa5" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_000.png" id="2_k6udv"]
+[ext_resource type="Texture2D" uid="uid://cbvr8i44sx4sn" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_001.png" id="3_37bmd"]
+[ext_resource type="Texture2D" uid="uid://hafjbo8cxn44" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_002.png" id="4_52vlq"]
+[ext_resource type="Texture2D" uid="uid://dulpfjopq27t3" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_003.png" id="5_le1y6"]
+[ext_resource type="Texture2D" uid="uid://c10mtplyyf1nw" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_004.png" id="6_1iqid"]
+[ext_resource type="Texture2D" uid="uid://bkowbtne3uwbw" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_005.png" id="7_oi7me"]
+[ext_resource type="Texture2D" uid="uid://8nlncoj37fpt" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_006.png" id="8_0imuk"]
+[ext_resource type="Texture2D" uid="uid://dvkggke6qmx34" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_007.png" id="9_13dh7"]
+[ext_resource type="Texture2D" uid="uid://07vi0kry8u2f" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_008.png" id="10_xh6ys"]
+[ext_resource type="Texture2D" uid="uid://ti6htekndklf" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_009.png" id="11_tbxwh"]
+[ext_resource type="Texture2D" uid="uid://ct2odcjd32e16" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_010.png" id="12_nkstx"]
+[ext_resource type="Texture2D" uid="uid://qn0w01yqcei3" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_011.png" id="13_dvb2u"]
+[ext_resource type="Texture2D" uid="uid://ctnvdtycnkfgj" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_012.png" id="14_pv5jh"]
+[ext_resource type="Texture2D" uid="uid://b755ltdt7k2ax" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_013.png" id="15_6tlqr"]
+[ext_resource type="Texture2D" uid="uid://cnhmjagv2r02r" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_014.png" id="16_so2c4"]
+[ext_resource type="Texture2D" uid="uid://bojjw63vxjtwg" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_015.png" id="17_luejk"]
+[ext_resource type="Texture2D" uid="uid://ckp02cg7ygyns" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_016.png" id="18_x4w2x"]
+[ext_resource type="Texture2D" uid="uid://bq1hya8a578te" path="res://assets/characters/eos/animations/idle/0_Dark_Oracle_Idle_017.png" id="19_hqwdf"]
+[ext_resource type="Texture2D" uid="uid://b7r5pcsjb2ikp" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_000.png" id="20_78hbf"]
+[ext_resource type="Texture2D" uid="uid://c8v5plw2jykua" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_001.png" id="21_8sw4o"]
+[ext_resource type="Texture2D" uid="uid://cp7vo2fust1f" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_002.png" id="22_emriw"]
+[ext_resource type="Texture2D" uid="uid://bo51pqgxa5ulr" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_003.png" id="23_b56hf"]
+[ext_resource type="Texture2D" uid="uid://bef52c2kpy7hj" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_004.png" id="24_cee2p"]
+[ext_resource type="Texture2D" uid="uid://dvuajxceagynr" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_005.png" id="25_bwi5u"]
+[ext_resource type="Texture2D" uid="uid://belgtb58ng1l1" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_006.png" id="26_3u3xf"]
+[ext_resource type="Texture2D" uid="uid://cn66uxgl2lf1h" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_007.png" id="27_fp2oc"]
+[ext_resource type="Texture2D" uid="uid://jamntdu1xf1y" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_008.png" id="28_xj2wk"]
+[ext_resource type="Texture2D" uid="uid://do2tywkktl65w" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_009.png" id="29_lh0as"]
+[ext_resource type="Texture2D" uid="uid://c0jvrudpkwysh" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_010.png" id="30_j2awv"]
+[ext_resource type="Texture2D" uid="uid://dkt82rk1rtf1b" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_011.png" id="31_gii34"]
+[ext_resource type="Texture2D" uid="uid://b81vbduk84kkh" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_012.png" id="32_hxppo"]
+[ext_resource type="Texture2D" uid="uid://6ewala1bdhq0" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_013.png" id="33_24jon"]
+[ext_resource type="Texture2D" uid="uid://mh3cuy7a07f7" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_014.png" id="34_2o71k"]
+[ext_resource type="Texture2D" uid="uid://3568nvee0j88" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_015.png" id="35_2sr2o"]
+[ext_resource type="Texture2D" uid="uid://btnjlqofttvc7" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_016.png" id="36_klybb"]
+[ext_resource type="Texture2D" uid="uid://dks2klhvd8ac8" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_017.png" id="37_87lbq"]
+[ext_resource type="Texture2D" uid="uid://3fay0ksfoedy" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_018.png" id="38_gkvmu"]
+[ext_resource type="Texture2D" uid="uid://c38k6ygnj16d8" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_019.png" id="39_wqmxb"]
+[ext_resource type="Texture2D" uid="uid://butv457mron3y" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_020.png" id="40_q1hrb"]
+[ext_resource type="Texture2D" uid="uid://ig2mjxtmr37g" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_021.png" id="41_v3ea0"]
+[ext_resource type="Texture2D" uid="uid://bdmow24gd1c7c" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_022.png" id="42_rlih6"]
+[ext_resource type="Texture2D" uid="uid://dv5qinf18ltnr" path="res://assets/characters/eos/animations/walking/0_Dark_Oracle_Walking_023.png" id="43_8v6ci"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4qco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k6udv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_37bmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_52vlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_le1y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1iqid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oi7me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0imuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_13dh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xh6ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tbxwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nkstx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dvb2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pv5jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6tlqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_so2c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_luejk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_x4w2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hqwdf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_78hbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8sw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_emriw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_b56hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cee2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bwi5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3u3xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fp2oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_xj2wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lh0as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_j2awv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_gii34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_hxppo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_24jon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_2o71k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_2sr2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_klybb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_87lbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gkvmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wqmxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_q1hrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_v3ea0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rlih6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8v6ci")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 24.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_6qph8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.50002, 1.24999)
 scale = Vector2(0.685556, 0.669445)
-texture = ExtResource("1_6ri8s")
+sprite_frames = SubResource("SpriteFrames_i4qco")
+animation = &"idle"
+frame = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.4, 0.4)
