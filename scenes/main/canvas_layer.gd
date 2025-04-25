@@ -5,8 +5,14 @@ extends CanvasLayer
 @onready var quit_button: Button = $QuitButton
 @onready var hover_sound: AudioStreamPlayer = $HoverSound
 
+<<<<<<< Updated upstream
 # Preload sounds to avoid null errors
 const HOVER_SOUND = preload("res://assets/audio/startpage/hoverSound.mp3")
+=======
+func _on_button_pressed():
+	print("Button clicked!")  # Test if working
+	get_tree().change_scene_to_file("res://scenes/environments/forge_biome/map.tscn")  # Load next scene
+>>>>>>> Stashed changes
 
 func _ready():
 	# Initialize music with looping
