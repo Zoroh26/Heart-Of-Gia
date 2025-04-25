@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pvfmxeqk3tlv" path="res://assets/characters/eos/eos.png" id="1_6ri8s"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_6qph8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
